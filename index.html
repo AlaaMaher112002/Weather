@@ -1,0 +1,274 @@
+<html>
+    <head>
+        <title>Weather</title>
+<link href="css/all.min.css" rel="stylesheet">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+
+    </head>
+    <body>
+
+       
+
+ <nav class="navbar navbar-expand-lg py-3 position-fixed w-100 top-0">
+                <div class="container-fluid">
+                    <span><i class="fa-solid fa-cloud px-2 text-info" id="cloud"></i></span>
+                    <a class="navbar-brand text-light" href="#"> Weather</a>
+                    <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon bg-light"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 pe-5">
+                            <li class="nav-item">
+                                <a class="nav-link active text-info px-4" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light px-4" href="#">News</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light px-4" href="#">Live Cameras</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light px-4" href="#">Photos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light px-4" href="#">Contact</a>
+                            </li>
+                        </ul>
+    
+                    </div>
+                </div>
+</nav>
+   
+<div class="home">
+
+<div class="SearchArea p-5 mt-5">
+    <input type="text" class="inputSearch form-control bg-dark text-white position-relative ms-5" id="searchInput"
+    placeholder=" Find Your Location . . . . ">
+    <input type="submit" value="Search" class=" position-absolute">
+</div>
+
+<div class="container p-5">
+    <div class="row gy-4">
+
+
+
+        <div class="col-md-4 col-sm-12">
+            <div class="temp-card  text-white ">
+                <div class="dayanddate d-flex justify-content-between w-100 ">
+                    <h5 id="today"></h5>
+                    <h5 id="today-date"></h5>
+                </div>
+
+                <div class="day_details ps-3">
+                    <p id="location" class="pt-4"></p>
+
+                    <div class="pt-1 d-flex py-3">
+                        <h1 class="" id="today-degree"></h1>                                  
+                        <h1  class="" ><sup>o</sup>C</h1>
+                        <img id="today-icon" width="90" class="ps-4">
+                    </div>
+                   
+
+                    <p id="taday-description"></p>
+                    <div class="details pb-5">
+                        <i class="fa-solid fa-umbrella pr-1"></i>
+                        <span id="humidty"></span><span>%</span>
+
+                        <i class="fa-solid fa-wind pr-1 pl-3 ps-3"></i>
+                        <span id="wind"></span><span>km/h</span>
+
+
+                        <i class="fa-solid fa-compass pr-1 pl-3 ps-3"></i>
+                        <span id="compass"></span>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 col-sm-12">
+            <div class="temp-card  text-white pb-2">
+            <div class="dayanddate d-flex  justify-content-center w-100">
+                <h4 class="nextday"></h4>
+            </div>
+            <div class="temp-details p-3">
+                <div>
+                    <img class="next-day-icon" width="90">
+                </div>
+                <h2 class="max-degree d-inline-block"></h2>
+                <h2 class="d-inline-block"><sup>o</sup>C</h2>
+                <br>
+                <p class="min-degree d-inline-block"></p>
+                <p class="d-inline-block"><sup> o</sup>C</p>
+                <p class="next-day-descripton"></p>
+            </div> 
+        </div>
+        </div>
+
+        <div class="col-md-4 col-sm-12">
+            <div class="temp-card  text-white ">
+            <div class="dayanddate d-flex justify-content-center w-100">
+                <h4 class="nextday text-center"></h4>
+            </div>
+            <div class="temp-details p-2 px-4">
+                <div>
+                <img class="next-day-icon" width="90">
+                </div>
+                <h2 class="max-degree d-inline-block"></h2>
+                <h2 class="d-inline-block"><sup>o</sup>C</h2>
+                <br>
+                <p class="min-degree d-inline-block"></p>
+                <p class="d-inline-block"><sup> o</sup>C</p>
+                <p class="next-day-descripton pb-4"></p>
+            </div>  
+        </div>
+        </div>
+
+
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="container p-5">
+    <div class="row mainRow gy-5">
+       
+        <div class="col-md-3">
+            <div class="temp-card  text-white ">
+                <div class="dayanddate d-flex justify-content-between w-100">
+                    <h5 id="today"></h5>
+                    <h5 id="today-date"></h5>
+                </div>
+
+                <div class="day_details ps-3 ">
+                    <p id="location" class="pt-4"></p>
+
+                    <div class="pt-1 d-flex py-3" >
+                        <h1 class="" id="today-degree"></h1>                                  
+                        <h1  class="" ><sup>o</sup>C</h1>
+                        <img id="today-icon" width="90" class="ps-4">
+                    </div>
+                   
+
+                    <p id="taday-description"></p>
+
+                    <div class="details pb-0">
+                        <i class="fa-solid fa-umbrella pr-1"></i>
+                        <span id="humidty"></span><span>%</span>
+
+                        <i class="fa-solid fa-wind pr-1 pl-3 ps-3"></i>
+                        <span id="wind"></span><span>km/h</span>
+
+
+                        <i class="fa-solid fa-compass pr-1 pl-3 ps-3"></i>
+                        <span id="compass"></span>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="col-md-3 text-white text-center">
+            <div class="dayanddate d-flex  justify-content-center">
+                <h4 class="nextday"></h4>
+            </div>
+            <div class="temp-details">
+                <div>
+                    <img class="next-day-icon" width="90">
+                </div>
+                <h2 class="max-degree d-inline-block"></h2>
+                <h2 class="d-inline-block"><sup>o</sup>C</h2>
+                <br>
+                <p class="min-degree d-inline-block"></p>
+                <p class="d-inline-block"><sup> o</sup>C</p>
+                <p class="next-day-descripton"></p>
+            </div>    
+        </div>
+
+
+        <div class="col-md-3 text-white text-center">
+            <div class="dayanddate d-flex justify-content-center ">
+                <h4 class="nextday text-center"></h4>
+            </div>
+            <div class="temp-details">
+                <div>
+                    <img class="next-day-icon" width="90">
+                </div>
+                <h2 class="max-degree d-inline-block"></h2>
+                <h2 class="d-inline-block"><sup>o</sup>C</h2>
+                <br>
+                <p class="min-degree d-inline-block"></p>
+                <p class="d-inline-block"><sup> o</sup>C</p>
+                <p class="next-day-descripton"></p>
+            </div>   
+        </div> 
+        
+        
+    </div>    
+</div> -->
+
+<div class="footer  w-100 text-white text-center">
+    <div class="container py-4">
+                 
+                 <p>Copyright 2014 Company name. Designed by Themezy. All rights reserved</p>
+          
+          
+                <div class="icons m-3">
+                    <a><i class="fa-brands fa-facebook-f "></i></a>
+                    <a><i class="fa-brands fa-twitter"></i></a>
+                    <a><i class="fa-brands fa-google"></i></a>
+                    <a><i class="fa-brands fa-pinterest"></i></a>
+
+
+                </div>
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/select.js"></script>
+    </body>
+</html>
